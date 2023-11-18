@@ -4,10 +4,10 @@ public class Salary {
     //instance variables
     private double basicSalary;
     private double allowances;
-    private double deductions;
+    private double basicDeductions;
 
 
-    //fixed deduction amount in CAD$
+    //fixed company deduction amount in CAD$
     private final double companyDeductions = 105;
 
     //fixed income tax
@@ -15,10 +15,10 @@ public class Salary {
 
 
     //constructor
-    public Salary(double basicSalary, double allowances, double deductions){
+    public Salary(double basicSalary, double allowances, double basicDeductions){
         this.basicSalary=basicSalary;
         this.allowances=allowances;
-        this.deductions=calculateDeductions();
+        this.basicDeductions=basicDeductions;
     }
 
 
@@ -31,8 +31,8 @@ public class Salary {
         return allowances;
     }
 
-    public double getDeductions() {
-        return deductions;
+    public double getBasicDeductions() {
+        return basicDeductions;
     }
 
 
@@ -43,7 +43,7 @@ public class Salary {
      * @return The net salary of the employee.
      */
     public double calculateNetSalary(){
-        return basicSalary+allowances-deductions;
+        return basicSalary+allowances-calculateDeductions();
     }
 
 
@@ -58,7 +58,7 @@ public class Salary {
         double tax = totalEarnings*taxRate;
 
         //tax + mandatory deductions = total deductions
-        return tax + companyDeductions;
+        return tax + companyDeductions + basicDeductions;
     }
 
 }
