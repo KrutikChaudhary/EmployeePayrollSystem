@@ -17,7 +17,16 @@ public class Payroll {
      * and other relevant financial details.
      */
     public void generatePayroll() {
-        // Implementation goes here
+        System.out.println("*******Pay Roll*******");
+        System.out.println("Employee    :" + employee.getName());
+        System.out.println("Designation :" + employee.getDesignation());
+        System.out.println("EmployeeID  :" + employee.getEmployeeId());
+        System.out.println("----------------------------");
+        System.out.println("Pay Period  : " + payPeriod);
+        System.out.println("Basic Salary: +" + employee.getSalary().getBasicSalary());
+        System.out.println("Allowances  : +" + employee.getSalary().getAllowances());
+        System.out.println("Deductions  : -" + employee.getSalary().calculateDeductions());
+        System.out.println("Total pay   :  " + employee.getSalary().calculateNetSalary());
     }
 
 }
