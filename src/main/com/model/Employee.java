@@ -10,11 +10,12 @@ public class Employee {
     private Salary salary;
 
     // constructor
-    public Employee(int employeeId, String name, String designation, String department) {
+    public Employee(int employeeId, String name, String designation, String department, Salary salary) {
         this.employeeId = employeeId;
         this.name = name;
         this.designation = designation;
         this.department = department;
+        this.salary=salary;
     }
 
     // accessors
