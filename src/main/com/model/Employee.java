@@ -7,6 +7,7 @@ public class Employee {
     private String name;
     private String designation;
     private String department;
+    private Salary salary;
 
     // constructor
     public Employee(int employeeId, String name, String designation, String department) {
@@ -31,6 +32,9 @@ public class Employee {
 
     public String getDepartment() {
         return this.department;
+    }
+    public Salary getSalary(){
+        return this.salary;
     }
 
     // mutators
