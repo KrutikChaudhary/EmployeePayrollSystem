@@ -33,6 +33,7 @@ public class Employee {
     public String getDepartment() {
         return this.department;
     }
+
     public Salary getSalary(){
         return this.salary;
     }

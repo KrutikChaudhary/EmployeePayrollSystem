@@ -26,4 +26,14 @@ public class Salary {
         return deductions;
     }
 
+    /**
+     * Calculates the net salary of an employee by subtracting deductions from the sum of the basic salary and allowances.
+     * The net salary represents the amount an employee receives after accounting for necessary deductions.
+     *
+     * @return The net salary of the employee.
+     */
+    public double calculateNetSalary(){
+        return basicSalary+allowances-deductions;
+    }
+
 }
